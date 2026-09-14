@@ -24,12 +24,31 @@ program {
 }
 ```
 
-## Samples
+## Sample source and license
 
-The grammar repository contains representative Semantic syntax fixtures. For the upstream Linguist pull request, the files under `samples/Semantic/` in the Linguist repository should be replaced or supplemented with real-world, independently published Semantic source examples whose source and license can be documented.
+The Linguist patch uses the real project file `src/semantic-se/doc.se` from:
+
+- https://github.com/tarekwasfy01/Semantic-Programming-Language
+- Source file: https://github.com/tarekwasfy01/Semantic-Programming-Language/blob/main/src/semantic-se/doc.se
+- License: MIT, copyright (c) 2026 Tarek Wasfy
+- License file: https://github.com/tarekwasfy01/Semantic-Programming-Language/blob/main/LICENSE
+
+The sample is copied into Linguist as `samples/Semantic/compiler-doc.se`; it is not a synthetic hello-world/tutorial fixture created for the Linguist submission.
 
 ## Usage evidence
 
-Before submitting upstream, add current GitHub code-search evidence for `.se` usage and verify that it satisfies Linguist's current popularity requirements. Do not inflate usage with generated repositories or artificial sample repositories.
+A repository-tree count of the currently listed public Semantic repositories found **4,181 `.se` files** across six repositories:
+
+| Repository | `.se` files |
+| --- | ---: |
+| SemanticProgrammingLanguage/Semantic-Gio-UI | 217 |
+| SemanticProgrammingLanguage/Semantic-Tkinter | 7 |
+| SemanticProgrammingLanguage/Semantic-Numpy | 3,413 |
+| SemanticProgrammingLanguage/Semantic-Go-Webview2 | 40 |
+| SemanticProgrammingLanguage/Semantic-Chroma-Synthax-Highliting-Module | 78 |
+| tarekwasfy01/Semantic-Programming-Language | 426 |
+| **Total** | **4,181** |
+
+This is evidence of files physically present on the repositories' default branches, not a claim that all 4,181 files are currently indexed by GitHub Code Search. Before opening the upstream PR, add the current GitHub Code Search result evidence required by Linguist and describe the indexed count truthfully.
 
 `.sp` support can be proposed separately later with real-world samples for both Semantic and SourcePawn plus a strict disambiguation heuristic if the usage evidence justifies it.
