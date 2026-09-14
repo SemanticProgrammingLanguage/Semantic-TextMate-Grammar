@@ -1,0 +1,13 @@
+{
+  "name": "semantic-textmate-grammar",
+  "displayName": "Semantic Programming Language",
+  "description": "TextMate grammar for the Semantic Programming Language (.se and .sp).",
+  "version": "0.1.0",
+  "publisher": "semanticprogramminglanguage",
+  "license": "MIT",
+  "engines": {"vscode": "^1.85.0"},
+  "categories": ["Programming Languages"],
+  "repository": {"type":"git","url":"https://github.com/SemanticProgrammingLanguage/Semantic-TextMate-Grammar.git"},
+  "scripts": {"test":"node tests/validate.mjs"},
+  "contributes": {"languages":[{"id":"semantic","aliases":["Semantic","Semantic Programming Language"],"extensions":[".se",".sp"],"configuration":"./language-configuration.json"}],"grammars":[{"language":"semantic","scopeName":"source.semantic","path":"./syntaxes/semantic.tmLanguage.json"}]}
+}

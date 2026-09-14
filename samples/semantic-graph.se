@@ -1,0 +1,10 @@
+# Semantic Programming Language
+se 1
+program {
+    schema = 1
+    evaluation = "eager_left_to_right"
+    index_base = 1
+    value_model = "tagged_dynamic_binary64"
+    nodes = list [ object { id = 10 structural_kind = "function" name = "accumulate" scope_id = 1 } ]
+    relations = list [ object { kind = "contains" from = 10 to = 11 ordinal = 0 } ]
+}

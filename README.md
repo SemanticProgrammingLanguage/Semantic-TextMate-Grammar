@@ -1,35 +1,74 @@
-# Semantic Programming Language — TextMate Grammar
+# Semantic TextMate Grammar
 
-This repository contains the canonical TextMate grammar and editor metadata for the **Semantic Programming Language**.
+Official TextMate-compatible syntax grammar and GitHub Linguist preparation for the **Semantic Programming Language**.
 
-## File extensions
+## Formats
 
-- `.se` — primary, human-readable Semantic source format
-- `.sp` — additional human-readable transport/source format
-- `.spz` — compressed binary Semantic format; intentionally not registered in the TextMate grammar because it is not text
+| Extension | Role | Text/Binary | Highlighting |
+|---|---|---|---|
+| `.se` | Primary Semantic source/transport format | UTF-8 text | Yes |
+| `.sp` | Legacy/alternative readable Semantic transport | UTF-8 text | Yes |
+| `.spz` | Lossless block-compressed Semantic transport | Binary | No |
 
-## Contents
+`.se` is the primary extension. `.sp` remains wire-compatible with the readable Semantic envelope. `.spz` is an official Semantic format, but it is a compressed binary envelope and therefore is intentionally not listed in the TextMate grammar `fileTypes`.
 
-- `syntaxes/semantic.tmLanguage.json` — TextMate grammar (`source.semantic`)
-- `language-configuration.json` — editor language configuration
-- `samples/` — representative source samples
-- `tests/` — lightweight grammar/metadata validation
-- `linguist/` — proposed GitHub Linguist metadata and submission notes
+The canonical text envelope starts with either:
 
-## Validation
-
-```bash
-npm test
+```text
+se 1
+program {
+    schema = 1
+}
 ```
 
-The validation checks the package metadata, TextMate grammar shape, sample coverage, and Linguist proposal consistency.
+or:
+
+```text
+sp 1
+program {
+    schema = 1
+}
+```
+
+## TextMate scope
+
+```text
+source.semantic
+```
+
+The grammar supports:
+
+- `#` comments
+- `se 1` / `sp 1` headers
+- `program`, `object`, `list`, `ranges`
+- native semantic sections such as `types`, `scopes`, `nodes`, and `relations`
+- quoted strings and escapes
+- numbers, booleans, and `null`
+- semantic references such as `%12` and `@3`
+- relation arrows (`->`)
+- compact and readable field assignments
 
 ## GitHub Linguist
 
-The proposed language entry lives in `linguist/languages.yml`. Submission guidance and supporting notes are in the same directory.
+Preparation material is under [`linguist/`](linguist/).
 
-For Linguist, `.se` is the primary extension and `.sp` is an additional text extension. `.spz` is a binary compressed format and should not be treated as source text.
+The recommended Linguist submission requests:
+
+- `.se` as the primary extension
+- `.sp` as a secondary extension shared with SourcePawn, with a content heuristic
+- `.spz` documented as an official Semantic binary transport, but **not** registered as a source-code extension because GitHub Linguist classifies text source and `.spz` is compressed binary data
+
+If maintainers explicitly agree to index `.spz` as an extension, `linguist/languages-with-spz.yml` contains the requested all-format variant.
+
+## Source of syntax truth
+
+The grammar is based on the canonical Semantic serializer/parser:
+
+- Semantic Programming Language main repository
+- Code Transpiler `internal/backend/semantic_sp.go`
+- `docs/SP_LANGUAGE.md`
+- `docs/SFPC.md`
 
 ## License
 
-MIT — see `LICENSE`.
+MIT.

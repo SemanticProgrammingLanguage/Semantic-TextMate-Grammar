@@ -1,0 +1,9 @@
+# Semantic Programming Language
+se 1
+program {
+    schema = 1
+    types { type @1 { kind = integer origin = builtin } }
+    scopes { scope %1 { kind = function parent = %0 } }
+    nodes { node %10 { structural_kind = function kind = declaration scope = %1 } }
+    relations { contains %10 -> node:11 { ordinal = 0 role = body } }
+}

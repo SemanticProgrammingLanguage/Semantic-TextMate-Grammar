@@ -1,0 +1,8 @@
+# Proposed addition to lib/linguist/heuristics.yml if `.sp` is accepted
+# for both Semantic and SourcePawn.
+
+- extensions: ['.sp']
+  rules:
+  - language: Semantic
+    pattern: '\A(?:[ \t]*\#[^\r\n]*(?:\r?\n|\r))*[ \t]*sp[ \t]+1[ \t]*(?:\r?\n|\r)[ \t]*program[ \t]*\{'
+  - language: SourcePawn

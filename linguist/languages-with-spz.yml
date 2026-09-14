@@ -1,0 +1,15 @@
+# Requested all-format variant.
+# NOTE: .spz is an official Semantic format but is a compressed binary envelope.
+# GitHub Linguist maintainers may reject it as a programming-language extension.
+Semantic:
+  type: programming
+  color: "#5B5BD6"
+  aliases:
+  - semantic
+  - semantic-programming-language
+  extensions:
+  - ".se"
+  - ".sp"
+  - ".spz"
+  tm_scope: source.semantic
+  ace_mode: text

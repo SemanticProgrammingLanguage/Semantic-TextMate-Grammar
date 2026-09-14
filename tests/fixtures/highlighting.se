@@ -1,0 +1,13 @@
+# scopes used by the grammar
+se 1
+program {
+    schema = 1
+    enabled = true
+    absent = null
+    count = 42
+    ratio = -1.25e+3
+    target = %12
+    type_ref = @4
+    data = list [ 1 2 3 object { name = "value\nwith escape" } ]
+    facet = ranges 64 [ 0-3 10 20-25 ]
+}
