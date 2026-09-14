@@ -10,4 +10,5 @@ program {
     type_ref = @4
     data = list [ 1 2 3 object { name = "value\nwith escape" } ]
     facet = ranges 64 [ 0-3 10 20-25 ]
+    relation = object { from = 12 to = 14 edge = "control" }
 }
