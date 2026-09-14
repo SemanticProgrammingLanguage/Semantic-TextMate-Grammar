@@ -26,14 +26,14 @@ program {
 
 ## Sample source and license
 
-The Linguist patch uses the real project file `src/semantic-se/doc.se` from:
+The Linguist patch uses the real project file `app/runmain.se` from:
 
-- https://github.com/tarekwasfy01/Semantic-Programming-Language
-- Source file: https://github.com/tarekwasfy01/Semantic-Programming-Language/blob/main/src/semantic-se/doc.se
-- License: MIT, copyright (c) 2026 Tarek Wasfy
-- License file: https://github.com/tarekwasfy01/Semantic-Programming-Language/blob/main/LICENSE
+- https://github.com/SemanticProgrammingLanguage/Semantic-Gio-UI
+- Source file: https://github.com/SemanticProgrammingLanguage/Semantic-Gio-UI/blob/main/app/runmain.se
+- License: Unlicense OR MIT; the repository license also preserves the original Gio MIT attribution and the 2026 Semantic translation/packaging attribution
+- License file: https://github.com/SemanticProgrammingLanguage/Semantic-Gio-UI/blob/main/LICENSE
 
-The sample is copied into Linguist as `samples/Semantic/compiler-doc.se`; it is not a synthetic hello-world/tutorial fixture created for the Linguist submission.
+The sample is copied into Linguist as `samples/Semantic/gio-runmain.se`. It is a real project source file, is below Linguist's 50 KB sample-size limit, and is not a synthetic hello-world/tutorial fixture created for the Linguist submission.
 
 ## Usage evidence
 
