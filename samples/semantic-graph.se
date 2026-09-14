@@ -1,10 +1,47 @@
 # Semantic Programming Language
+# Representative Semantic graph transport sample
 se 1
 program {
     schema = 1
     evaluation = "eager_left_to_right"
     index_base = 1
     value_model = "tagged_dynamic_binary64"
-    nodes = list [ object { id = 10 structural_kind = "function" name = "accumulate" scope_id = 1 } ]
-    relations = list [ object { kind = "contains" from = 10 to = 11 ordinal = 0 } ]
+
+    origin = object {
+        source_language = "go"
+        source_name = "graph_pipeline.go"
+    }
+
+    type_table = list [
+        object { id = 1 kind = "integer" width = 64 signed = true }
+        object { id = 2 kind = "string" }
+        object { id = 3 kind = "function" }
+    ]
+
+    nodes = list [
+        object {
+            id = 10
+            structural_kind = "function"
+            name = "accumulate"
+            scope_id = 1
+            type_id = 3
+        }
+        object {
+            id = 11
+            structural_kind = "parameter"
+            name = "values"
+            scope_id = 1
+        }
+        object {
+            id = 12
+            structural_kind = "return"
+            scope_id = 1
+        }
+    ]
+
+    relations = list [
+        object { kind = "contains" from = 10 to = 11 ordinal = 0 }
+        object { kind = "contains" from = 10 to = 12 ordinal = 1 }
+        object { kind = "control" from = 11 to = 12 }
+    ]
 }
