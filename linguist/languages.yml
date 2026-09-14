@@ -4,10 +4,8 @@ Semantic:
   type: programming
   color: "#FE8E28"
   aliases:
-  - semantic
   - semantic-programming-language
   extensions:
   - ".se"
-  - ".sp"
   tm_scope: source.semantic
   ace_mode: text
