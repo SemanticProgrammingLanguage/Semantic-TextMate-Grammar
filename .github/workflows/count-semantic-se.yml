@@ -91,3 +91,5 @@ This is a count of `.se` files physically present in the listed public repositor
           git add linguist/SEARCH_EVIDENCE.md .github/workflows/count-semantic-se.yml
           git commit -m 'Record verified Semantic .se file counts'
           git push origin HEAD:main
+
+# Triggered after initial workflow registration.
