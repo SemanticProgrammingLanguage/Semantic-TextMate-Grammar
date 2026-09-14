@@ -8,6 +8,24 @@ Before opening the upstream PR, record the current result counts and representat
 NOT is:fork path:*.se
 ```
 
+<!-- VERIFIED-SE-COUNT-START -->
+## Verified repository-tree count of `.se` files
+
+The following count was produced from the current `main`/default branches by cloning the public repositories and counting working-tree files whose names end in `.se`. File size is intentionally irrelevant to this repository-tree count.
+
+| Repository | `.se` files |
+| --- | ---: |
+| [SemanticProgrammingLanguage/Semantic-Gio-UI](https://github.com/SemanticProgrammingLanguage/Semantic-Gio-UI) | 217 |
+| [SemanticProgrammingLanguage/Semantic-Tkinter](https://github.com/SemanticProgrammingLanguage/Semantic-Tkinter) | 7 |
+| [SemanticProgrammingLanguage/Semantic-Numpy](https://github.com/SemanticProgrammingLanguage/Semantic-Numpy) | 3413 |
+| [SemanticProgrammingLanguage/Semantic-Go-Webview2](https://github.com/SemanticProgrammingLanguage/Semantic-Go-Webview2) | 40 |
+| [SemanticProgrammingLanguage/Semantic-Chroma-Synthax-Highliting-Module](https://github.com/SemanticProgrammingLanguage/Semantic-Chroma-Synthax-Highliting-Module) | 78 |
+| [tarekwasfy01/Semantic-Programming-Language](https://github.com/tarekwasfy01/Semantic-Programming-Language) | 426 |
+| **Total** | **4181** |
+
+This is a count of `.se` files physically present in the listed public repository working trees. It must not be presented as GitHub Code Search's indexed-file count; GitHub's search index may lag or omit large files.
+<!-- VERIFIED-SE-COUNT-END -->
+
 ## Known public Semantic repositories
 
 The following public repositories are known Semantic projects/modules and should be included as concrete usage evidence when preparing the upstream Linguist pull request:
