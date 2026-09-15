@@ -1,13 +1,56 @@
 {
-  "name": "semantic-textmate-grammar",
+  "name": "semantic-programming-language",
   "displayName": "Semantic Programming Language",
-  "description": "TextMate grammar for the Semantic Programming Language (.se and .sp).",
+  "description": "Language support for the Semantic Programming Language (.se, .sp and .spz), including TextMate syntax highlighting for readable Semantic source files.",
   "version": "0.1.0",
   "publisher": "semanticprogramminglanguage",
   "license": "MIT",
-  "engines": {"vscode": "^1.85.0"},
-  "categories": ["Programming Languages"],
-  "repository": {"type":"git","url":"https://github.com/SemanticProgrammingLanguage/Semantic-TextMate-Grammar.git"},
-  "scripts": {"test":"node tests/validate.mjs"},
-  "contributes": {"languages":[{"id":"semantic","aliases":["Semantic","Semantic Programming Language"],"extensions":[".se",".sp"],"configuration":"./language-configuration.json"}],"grammars":[{"language":"semantic","scopeName":"source.semantic","path":"./syntaxes/semantic.tmLanguage.json"}]}
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "semantic",
+    "programming language",
+    "se",
+    "sp",
+    "spz"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SemanticProgrammingLanguage/Semantic-TextMate-Grammar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SemanticProgrammingLanguage/Semantic-TextMate-Grammar/issues"
+  },
+  "homepage": "https://github.com/SemanticProgrammingLanguage/Semantic-TextMate-Grammar#readme",
+  "scripts": {
+    "test": "node tests/validate.mjs"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "semantic",
+        "aliases": [
+          "Semantic",
+          "Semantic Programming Language"
+        ],
+        "extensions": [
+          ".se",
+          ".sp",
+          ".spz"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "semantic",
+        "scopeName": "source.semantic",
+        "path": "./syntaxes/semantic.tmLanguage.json"
+      }
+    ]
+  }
 }
